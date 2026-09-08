@@ -1,0 +1,4 @@
+Scala is a powerful language.
+Spark is used for distributed data processing.
+Scala and Spark are commonly used together.
+Spark can process large datasets efficiently.

@@ -1,0 +1,13 @@
+# SBT
+.bsp/
+.metals/
+project/target/
+target/
+
+# Scala / build files
+*.class
+*.jar
+
+# IDE
+.vscode/
+.idea/
