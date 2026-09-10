@@ -1,0 +1,12 @@
+INFO Application started
+INFO User login successful
+ERROR Database connection failed
+INFO Processing customer request
+ERROR File not found
+WARN High memory usage
+INFO Transaction completed
+ERROR Database connection failed
+INFO Application running
+ERROR Invalid user input
+WARN Slow response detected
+INFO Application completed
