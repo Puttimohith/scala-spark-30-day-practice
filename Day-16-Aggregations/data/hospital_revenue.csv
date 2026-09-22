@@ -1,0 +1,13 @@
+department,doctor,patient_type,patients,average_bill
+Cardiology,Dr.Arun,Inpatient,18,45000
+Cardiology,Dr.Priya,Outpatient,35,3500
+Cardiology,Dr.Rahul,Inpatient,15,42000
+Neurology,Dr.Sneha,Inpatient,12,50000
+Neurology,Dr.Kiran,Outpatient,28,4000
+Neurology,Dr.Anjali,Inpatient,10,48000
+Orthopedics,Dr.Manoj,Inpatient,20,30000
+Orthopedics,Dr.Divya,Outpatient,40,2500
+Orthopedics,Dr.Ravi,Inpatient,16,28000
+Pediatrics,Dr.Pooja,Outpatient,45,2000
+Pediatrics,Dr.Arun,Inpatient,8,22000
+Pediatrics,Dr.Sneha,Outpatient,32,1800
