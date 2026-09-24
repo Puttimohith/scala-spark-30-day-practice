@@ -1,0 +1,16 @@
+student_id,student_name,course,marks,exam_date
+101,Arun,Data Engineering,88,2026-09-10
+102,Priya,Data Engineering,95,2026-09-10
+103,Rahul,Data Engineering,88,2026-09-10
+104,Sneha,Data Engineering,76,2026-09-10
+105,Kiran,Data Engineering,95,2026-09-10
+106,Anjali,Data Science,91,2026-09-11
+107,Manoj,Data Science,85,2026-09-11
+108,Divya,Data Science,91,2026-09-11
+109,Ravi,Data Science,78,2026-09-11
+110,Pooja,Data Science,96,2026-09-11
+111,Vijay,Cloud Computing,89,2026-09-12
+112,Meena,Cloud Computing,94,2026-09-12
+113,Suresh,Cloud Computing,82,2026-09-12
+114,Kavya,Cloud Computing,94,2026-09-12
+115,Teja,Cloud Computing,75,2026-09-12
