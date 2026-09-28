@@ -1,0 +1,11 @@
+branch_id,branch_name,city,region
+B001,Hyderabad Central,Hyderabad,South
+B002,Vijayawada Main,Vijayawada,South
+B003,Visakhapatnam Port,Visakhapatnam,East
+B004,Bengaluru Tech,Bengaluru,South
+B005,Chennai Central,Chennai,South
+B006,Pune Main,Pune,West
+B007,Mumbai Andheri,Mumbai,West
+B008,Delhi Central,Delhi,North
+B009,Kolkata Main,Kolkata,East
+B010,Jaipur Central,Jaipur,North
