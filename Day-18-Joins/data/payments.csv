@@ -1,0 +1,10 @@
+payment_id,order_id,payment_mode,payment_status,payment_amount
+P501,1001,UPI,Completed,65000
+P502,1002,Credit Card,Completed,50000
+P503,1003,UPI,Completed,9000
+P504,1004,Debit Card,Completed,4000
+P505,1005,Credit Card,Pending,18000
+P506,1006,UPI,Completed,4000
+P507,1007,Credit Card,Completed,65000
+P508,1008,UPI,Completed,30000
+P509,1009,Debit Card,Failed,2000
