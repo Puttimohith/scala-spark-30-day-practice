@@ -1,0 +1,13 @@
+booking_id,customer_name,hotel,city,room_type,check_in,check_out,nights,amount,status
+H001,Arun,Grand Palace,Hyderabad,Deluxe,2026-09-01,2026-09-03,2,12000,Confirmed
+H002,Priya,Lake View,Vijayawada,Suite,2026-09-02,2026-09-05,3,21000,Confirmed
+H003,Rahul,Sea Breeze,Visakhapatnam,Standard,2026-09-03,2026-09-04,1,4500,Completed
+H004,Sneha,Grand Palace,Hyderabad,Suite,2026-09-04,2026-09-07,3,24000,Confirmed
+H005,Kiran,City Inn,Bengaluru,Standard,2026-09-05,2026-09-06,1,5000,Cancelled
+H006,Anjali,Lake View,Vijayawada,Deluxe,2026-09-06,2026-09-09,3,15000,Completed
+H007,Vikram,Sea Breeze,Visakhapatnam,Suite,2026-09-07,2026-09-10,3,18000,Confirmed
+H008,Meena,City Inn,Bengaluru,Deluxe,2026-09-08,2026-09-10,2,11000,Completed
+H009,Ravi,Grand Palace,Hyderabad,Standard,2026-09-09,2026-09-11,2,9000,Confirmed
+H010,Divya,Lake View,Vijayawada,Standard,2026-09-10,2026-09-12,2,8000,Completed
+H011,Manoj,Sea Breeze,Visakhapatnam,Deluxe,2026-09-11,2026-09-14,3,16500,Confirmed
+H012,Kavya,City Inn,Bengaluru,Suite,2026-09-12,2026-09-15,3,19500,Confirmed

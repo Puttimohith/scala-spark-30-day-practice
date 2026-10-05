@@ -1,0 +1,5 @@
+target/
+.bsp/
+project/target/
+spark-warehouse/
+metastore_db/
