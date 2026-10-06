@@ -1,0 +1,16 @@
+INFO Application started
+INFO User login successful
+ERROR Database connection failed
+INFO Processing request
+WARN High memory usage
+ERROR Payment service unavailable
+INFO Request completed
+INFO User logout successful
+ERROR File not found
+INFO Application health check passed
+WARN Slow response detected
+ERROR Authentication service failed
+INFO New user registered
+INFO Order processed successfully
+ERROR Network timeout
+INFO Application running normally
