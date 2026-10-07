@@ -1,0 +1,22 @@
+========== DAY 24 CONFIGURATION ==========
+Batch interval: 5 seconds
+Streaming Context created successfully
+
+========== STATELESS RESULT ==========
+Current-batch transaction counts:
+ACC001 -> 3
+ACC002 -> 2
+ACC003 -> 1
+
+========== STATEFUL RESULT ==========
+Accumulated transaction counts:
+ACC001 -> 3
+ACC002 -> 2
+ACC003 -> 1
+
+========== CONCEPT ==========
+Stateless processing considers only the current batch.
+Stateful processing maintains information across batches.
+Running counts are maintained separately for each account.
+
+========== DAY 24 COMPLETED ==========
