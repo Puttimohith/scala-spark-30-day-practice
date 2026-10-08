@@ -1,0 +1,74 @@
+========== DAY 26 - REAL-TIME HEALTHCARE PROJECT ==========
+========== PATIENT VITAL EVENT SCHEMA ==========
+========== BROADCAST THRESHOLDS ==========
+Maximum Temperature: 100.4 F
+Maximum Heart Rate: 100 bpm
+Maximum Systolic BP: 140
+Maximum Diastolic BP: 90
+Minimum SpO2: 92%
+========== ACCUMULATOR ==========
+Accumulator: Counts abnormal vital events detected across batches.
+========== CONCEPTS ==========
+Broadcast: Sends common threshold values efficiently to worker nodes.
+Accumulator: Tracks the total number of abnormal vital events.
+Stateful Processing: Maintains abnormal reading counts for each patient across batches.
+Window Processing: Analyzes abnormal readings over a fixed time window.
+Partitions: Divide RDD data into smaller parts that can be processed in parallel.
+DAG: Spark creates a Directed Acyclic Graph of transformations before execution.
+Fault Tolerance: Spark can recompute lost RDD partitions using lineage.
+========== ABNORMAL VITAL ALERTS ==========
+P003 -> Temp=101.8 F, HR=118 bpm, BP=145/95, SpO2=91%
+========== STATEFUL ABNORMAL COUNTS ==========
+P003 -> 1 abnormal readings
+========== WINDOW PROCESSING ==========
+P003 -> 1 abnormal readings in 10-second window
+Current RDD partitions: 2
+========== ABNORMAL VITAL ALERTS ==========
+P001 -> Temp=102.2 F, HR=125 bpm, BP=150/100, SpO2=89%
+P003 -> Temp=102.5 F, HR=122 bpm, BP=148/96, SpO2=90%
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 1 abnormal readings
+P003 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== WINDOW PROCESSING ==========
+P001 -> 1 abnormal readings in 10-second window
+P003 -> 2 abnormal readings in 10-second window
+Current RDD partitions: 2
+========== ABNORMAL VITAL ALERTS ==========
+P001 -> Temp=103.1 F, HR=130 bpm, BP=155/102, SpO2=87%
+P003 -> Temp=103.0 F, HR=128 bpm, BP=152/99, SpO2=88%
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P001 has repeated abnormal readings.
+P003 -> 3 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== WINDOW PROCESSING ==========
+P001 -> 2 abnormal readings in 10-second window
+P003 -> 2 abnormal readings in 10-second window
+Current RDD partitions: 2
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P001 has repeated abnormal readings.
+P003 -> 3 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== WINDOW PROCESSING ==========
+P001 -> 1 abnormal readings in 10-second window
+P003 -> 1 abnormal readings in 10-second window
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P001 has repeated abnormal readings.
+P003 -> 3 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== FINAL ACCUMULATOR RESULT ==========
+Total abnormal vital events detected: 5
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P001 has repeated abnormal readings.
+P003 -> 3 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== STATEFUL ABNORMAL COUNTS ==========
+P001 -> 2 abnormal readings
+REPEATED ABNORMAL ALERT: P001 has repeated abnormal readings.
+P003 -> 3 abnormal readings
+REPEATED ABNORMAL ALERT: P003 has repeated abnormal readings.
+========== DAY 26 COMPLETED ==========
