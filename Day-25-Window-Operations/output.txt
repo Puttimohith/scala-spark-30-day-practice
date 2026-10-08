@@ -1,0 +1,84 @@
+========== DAY 25 CONFIGURATION ==========
+Batch interval: 5 seconds
+Window size: 10 minutes
+Sliding interval: 5 seconds
+========== DSTREAM CREATED ==========
+Batch interval:
+Window size:
+Sliding interval:
+countByWindow:
+reduceByKeyAndWindow:
+========== STREAMING STARTED ==========
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 4
+Normal transaction activity.
+Rolling sales totals:
+ACC001 -> $250.00
+ACC002 -> $200.00
+ACC003 -> $300.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 8
+Normal transaction activity.
+Rolling sales totals:
+ACC001 -> $450.00
+ACC002 -> $800.00
+ACC003 -> $300.00
+ACC004 -> $400.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== STREAMING STOPPED ==========
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== COUNT BY WINDOW ==========
+Transactions in 10-minute window: 12
+ALERT: Sudden increase in transactions detected!
+Rolling sales totals:
+ACC001 -> $950.00
+ACC002 -> $1400.00
+ACC003 -> $750.00
+ACC004 -> $950.00
+========== DAY 25 COMPLETED ==========
