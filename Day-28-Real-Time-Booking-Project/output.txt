@@ -1,0 +1,88 @@
+[info] ========== DAY 28 - REAL-TIME BOOKING PROJECT ==========
+[info] ========== BOOKING EVENT SCHEMA ==========
+[info] bookingId, customerId, hotelId, roomId, eventType, rooms, amount, time
+[info] Event types: BOOK and CANCEL
+[info] ========== BROADCAST HOTEL REFERENCE ==========
+[info] H001 -> Grand Plaza, Total Rooms=5
+[info] H002 -> City Heights, Total Rooms=4
+[info] H003 -> Lake View, Total Rooms=3
+[info] ========== SPARK SQL REPORT ==========
+[info] H001 -> events=6, bookedRooms=8, cancelledRooms=2, revenue=9100
+[info] H002 -> events=4, bookedRooms=6, cancelledRooms=3, revenue=9200
+[info] H003 -> events=2, bookedRooms=3, cancelledRooms=0, revenue=4600
+[info] ========== CONCEPTS ==========
+[info] Pair RDD: Booking events are converted into key-value pairs using hotel ID as the key.
+[info] Window Operations: A 10-second window with a 5-second sliding interval is used to detect booking activity.
+[info] Broadcast: Small hotel reference data is broadcast to Spark executors to avoid repeatedly sending the same data.
+[info] State: Booking and cancellation changes are maintained using a running occupancy state for each hotel.
+[info] Occupancy: Current occupied rooms are calculated from previous occupancy plus booking or cancellation changes.
+[info] Spark SQL: Booking events are converted into a DataFrame and queried using SQL for reporting.
+[info] Partitioning: Booking RDDs use multiple partitions so Spark can process data in parallel.
+[info] Streaming: Spark Streaming processes booking events as micro-batches.
+[info] ========== STREAMING STARTED ==========
+[info] ========== CURRENT BOOKING BATCH ==========
+[info] B001 -> H001, ROOM101, BOOK, rooms=2, amount=2000.00
+[info] B002 -> H001, ROOM102, BOOK, rooms=1, amount=1200.00
+[info] B003 -> H002, ROOM201, BOOK, rooms=3, amount=4500.00
+[info] B004 -> H001, ROOM103, BOOK, rooms=2, amount=2200.00
+[info] ========== BOOKING / CANCELLATION STATE ==========
+[info] H001 (Grand Plaza) -> BOOKING change=5
+[info] H002 (City Heights) -> BOOKING change=3
+[info] ========== OCCUPANCY AND AVAILABILITY ==========
+[info] H001 (Grand Plaza) -> Occupied=5, Available=0, Occupancy=100.00%
+[info] H002 (City Heights) -> Occupied=3, Available=1, Occupancy=75.00%
+[info] ========== REVENUE BY HOTEL ==========
+[info] H001 -> Revenue=5400.00
+[info] H002 -> Revenue=4500.00
+[info] Current booking RDD partitions: 2
+[info] ========== BOOKING WINDOW ==========
+[info] H001 -> 3 booking events in 10-second window
+[info] H002 -> 1 booking events in 10-second window
+[info] ========== CURRENT BOOKING BATCH ==========
+[info] B005 -> H002, ROOM202, BOOK, rooms=1, amount=1500.00
+[info] B006 -> H001, ROOM101, CANCEL, rooms=2, amount=2000.00
+[info] B007 -> H003, ROOM301, BOOK, rooms=2, amount=3000.00
+[info] B008 -> H002, ROOM203, BOOK, rooms=2, amount=3200.00
+[info] ========== BOOKING / CANCELLATION STATE ==========
+[info] H001 (Grand Plaza) -> CANCELLATION change=2
+[info] H002 (City Heights) -> BOOKING change=3
+[info] H003 (Lake View) -> BOOKING change=2
+[info] ========== OCCUPANCY AND AVAILABILITY ==========
+[info] H001 (Grand Plaza) -> Occupied=3, Available=2, Occupancy=60.00%
+[info] H002 (City Heights) -> Occupied=4, Available=0, Occupancy=100.00%
+[info] H003 (Lake View) -> Occupied=2, Available=1, Occupancy=66.67%
+[info] ========== REVENUE BY HOTEL ==========
+[info] H002 -> Revenue=4700.00
+[info] H003 -> Revenue=3000.00
+[info] Current booking RDD partitions: 2
+[info] ========== BOOKING WINDOW ==========
+[info] H001 -> 4 booking events in 10-second window
+[info] HIGH BOOKING ACTIVITY: H001 has 4 events in the window.
+[info] H002 -> 3 booking events in 10-second window
+[info] H003 -> 1 booking events in 10-second window
+[info] ========== CURRENT BOOKING BATCH ==========
+[info] B009 -> H001, ROOM104, BOOK, rooms=1, amount=1300.00
+[info] B010 -> H002, ROOM201, CANCEL, rooms=3, amount=4500.00
+[info] B011 -> H003, ROOM302, BOOK, rooms=1, amount=1600.00
+[info] B012 -> H001, ROOM105, BOOK, rooms=2, amount=2400.00
+[info] ========== BOOKING / CANCELLATION STATE ==========
+[info] H001 (Grand Plaza) -> BOOKING change=3
+[info] H002 (City Heights) -> CANCELLATION change=3
+[info] H003 (Lake View) -> BOOKING change=1
+[info] ========== OCCUPANCY AND AVAILABILITY ==========
+[info] H001 (Grand Plaza) -> Occupied=5, Available=0, Occupancy=100.00%
+[info] H002 (City Heights) -> Occupied=1, Available=3, Occupancy=25.00%
+[info] H003 (Lake View) -> Occupied=3, Available=0, Occupancy=100.00%
+[info] ========== REVENUE BY HOTEL ==========
+[info] H001 -> Revenue=3700.00
+[info] H003 -> Revenue=1600.00
+[info] Current booking RDD partitions: 2
+[info] ========== BOOKING WINDOW ==========
+[info] H001 -> 3 booking events in 10-second window
+[info] H002 -> 3 booking events in 10-second window
+[info] H003 -> 2 booking events in 10-second window
+[info] ========== BOOKING WINDOW ==========
+[info] H001 -> 2 booking events in 10-second window
+[info] H002 -> 1 booking events in 10-second window
+[info] H003 -> 1 booking events in 10-second window
+[info] ========== DAY 28 COMPLETED ==========

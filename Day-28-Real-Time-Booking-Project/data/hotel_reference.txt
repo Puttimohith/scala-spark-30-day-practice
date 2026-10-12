@@ -1,0 +1,3 @@
+H001,Grand Plaza,5
+H002,City Heights,4
+H003,Lake View,3
