@@ -1,0 +1,62 @@
+========== DAY 27 - REAL-TIME BANKING PROJECT ==========
+========== TRANSACTION EVENT SCHEMA ==========
+========== CONCEPTS ==========
+Aggregation: Transactions are grouped by account and total amount is calculated.
+Window Processing: A 10-second window with a 5-second sliding interval detects transaction bursts.
+Join: Transactions are joined with small branch risk reference data using branch ID.
+Cache/Persist: Transaction data is persisted in memory to avoid repeated computation.
+Partitioning: Transaction RDDs use multiple partitions for parallel processing.
+YARN: In a production cluster, Spark can run on YARN where YARN manages cluster resources and Spark executors process the application.
+YARN Flow: Client submits application -> YARN ResourceManager allocates resources -> ApplicationMaster starts -> Executors run Spark tasks.
+========== TRANSACTION TOTALS BY ACCOUNT ==========
+ACC001 -> total transaction amount = 1200.00
+ACC002 -> total transaction amount = 1200.00
+ACC003 -> total transaction amount = 300.00
+========== SUSPICIOUS BURST WINDOW ==========
+ACC001 -> 2 transactions in 10-second window
+ACC002 -> 1 transactions in 10-second window
+ACC003 -> 1 transactions in 10-second window
+========== TRANSACTION + BRANCH RISK ==========
+TX001 -> ACC001, BR001, 500.00, Risk=LOW
+TX002 -> ACC002, BR002, 1200.00, Risk=MEDIUM
+TX003 -> ACC001, BR001, 700.00, Risk=LOW
+TX004 -> ACC003, BR003, 300.00, Risk=HIGH
+Cached transaction RDD partitions: 2
+Current transaction RDD partitions: 2
+========== TRANSACTION TOTALS BY ACCOUNT ==========
+ACC001 -> total transaction amount = 2000.00
+ACC002 -> total transaction amount = 1500.00
+ACC003 -> total transaction amount = 400.00
+========== SUSPICIOUS BURST WINDOW ==========
+ACC001 -> 4 transactions in 10-second window
+SUSPICIOUS BURST ALERT: ACC001 has 4 transactions in the window.
+ACC002 -> 2 transactions in 10-second window
+ACC003 -> 2 transactions in 10-second window
+========== TRANSACTION + BRANCH RISK ==========
+TX005 -> ACC001, BR001, 900.00, Risk=LOW
+TX006 -> ACC002, BR002, 1500.00, Risk=MEDIUM
+TX007 -> ACC001, BR001, 1100.00, Risk=LOW
+TX008 -> ACC003, BR003, 400.00, Risk=HIGH
+Cached transaction RDD partitions: 2
+Current transaction RDD partitions: 2
+========== TRANSACTION TOTALS BY ACCOUNT ==========
+ACC001 -> total transaction amount = 2700.00
+ACC002 -> total transaction amount = 800.00
+ACC003 -> total transaction amount = 600.00
+========== SUSPICIOUS BURST WINDOW ==========
+ACC001 -> 4 transactions in 10-second window
+SUSPICIOUS BURST ALERT: ACC001 has 4 transactions in the window.
+ACC002 -> 2 transactions in 10-second window
+ACC003 -> 2 transactions in 10-second window
+========== TRANSACTION + BRANCH RISK ==========
+TX009 -> ACC001, BR001, 1300.00, Risk=LOW
+TX010 -> ACC002, BR002, 800.00, Risk=MEDIUM
+TX011 -> ACC001, BR001, 1400.00, Risk=LOW
+TX012 -> ACC003, BR003, 600.00, Risk=HIGH
+Cached transaction RDD partitions: 2
+Current transaction RDD partitions: 2
+========== SUSPICIOUS BURST WINDOW ==========
+ACC001 -> 2 transactions in 10-second window
+ACC002 -> 1 transactions in 10-second window
+ACC003 -> 1 transactions in 10-second window
+========== DAY 27 COMPLETED ==========
