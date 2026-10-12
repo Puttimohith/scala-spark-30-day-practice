@@ -1,0 +1,396 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-29-End-to-End-E-Commerce-Project (in build file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/)
+[info] running (fork) Main 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/10/12 06:17:43 WARN Utils: Your hostname, MONI resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/10/12 06:17:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/10/12 06:17:43 INFO SparkContext: Running Spark version 3.5.6
+[error] 26/10/12 06:17:43 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 06:17:43 INFO SparkContext: Java version 17.0.20
+[error] 26/10/12 06:17:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/10/12 06:17:44 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 06:17:44 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/10/12 06:17:44 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 06:17:44 INFO SparkContext: Submitted application: Day-29-End-to-End-E-Commerce-Project
+[error] 26/10/12 06:17:44 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/10/12 06:17:44 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/10/12 06:17:44 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/10/12 06:17:44 INFO SecurityManager: Changing view acls to: mohit
+[error] 26/10/12 06:17:44 INFO SecurityManager: Changing modify acls to: mohit
+[error] 26/10/12 06:17:44 INFO SecurityManager: Changing view acls groups to: 
+[error] 26/10/12 06:17:44 INFO SecurityManager: Changing modify acls groups to: 
+[error] 26/10/12 06:17:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: mohit; groups with view permissions: EMPTY; users with modify permissions: mohit; groups with modify permissions: EMPTY
+[error] 26/10/12 06:17:44 INFO Utils: Successfully started service 'sparkDriver' on port 35083.
+[error] 26/10/12 06:17:44 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/10/12 06:17:45 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/10/12 06:17:45 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/10/12 06:17:45 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/10/12 06:17:45 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/10/12 06:17:45 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b37eaebc-0819-450f-99a0-eb4c23b48271
+[error] 26/10/12 06:17:45 INFO MemoryStore: MemoryStore started with capacity 849.6 MiB
+[error] 26/10/12 06:17:45 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/10/12 06:17:45 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/10/12 06:17:45 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/10/12 06:17:45 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/10/12 06:17:45 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 06:17:45 INFO Executor: Java version 17.0.20
+[error] 26/10/12 06:17:45 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/10/12 06:17:45 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@60c8a093 for default.
+[error] 26/10/12 06:17:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36067.
+[error] 26/10/12 06:17:45 INFO NettyBlockTransferService: Server created on 10.255.255.254:36067
+[error] 26/10/12 06:17:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/10/12 06:17:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 36067, None)
+[error] 26/10/12 06:17:45 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:36067 with 849.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 36067, None)
+[error] 26/10/12 06:17:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 36067, None)
+[error] 26/10/12 06:17:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 36067, None)
+[info] ======================================================
+[info] DAY 29 - END-TO-END E-COMMERCE PROJECT
+[info] ======================================================
+[info] RAW DATA COUNTS
+[info] Customers: 5
+[info] Products : 5
+[info] Orders   : 10
+[info] CLEAN DATA COUNTS
+[info] Customers: 5
+[info] Products : 5
+[info] Orders   : 10
+[info] PAIR RDD RESULT
+[info] Accessories     -> 5000.00
+[info] Electronics     -> 100000.00
+[info] Pair RDD partitions: 1
+[info] ENRICHED ORDERS
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-------+--------+----------+---------+-----------+
+[info] |order_id|customer_id|name |city         |segment|product_id|product_name|category   |price  |quantity|order_date|status   |order_value|
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-------+--------+----------+---------+-----------+
+[info] |O001    |C001       |Ravi |Hyderabad    |REGULAR|P001      |Laptop      |Electronics|60000.0|1       |2026-10-01|COMPLETED|60000.0    |
+[info] |O002    |C002       |Sita |Vijayawada   |PREMIUM|P002      |Mobile      |Electronics|25000.0|2       |2026-10-01|COMPLETED|50000.0    |
+[info] |O003    |C001       |Ravi |Hyderabad    |REGULAR|P003      |Headphones  |Accessories|3000.0 |2       |2026-10-02|COMPLETED|6000.0     |
+[info] |O004    |C003       |Arjun|Visakhapatnam|REGULAR|P004      |Keyboard    |Accessories|2000.0 |1       |2026-10-02|CANCELLED|2000.0     |
+[info] |O005    |C004       |Anu  |Guntur       |PREMIUM|P005      |Monitor     |Electronics|15000.0|2       |2026-10-03|COMPLETED|30000.0    |
+[info] |O006    |C002       |Sita |Vijayawada   |PREMIUM|P003      |Headphones  |Accessories|3000.0 |3       |2026-10-03|COMPLETED|9000.0     |
+[info] |O007    |C005       |Kiran|Warangal     |REGULAR|P002      |Mobile      |Electronics|25000.0|1       |2026-10-04|COMPLETED|25000.0    |
+[info] |O008    |C003       |Arjun|Visakhapatnam|REGULAR|P001      |Laptop      |Electronics|60000.0|1       |2026-10-04|COMPLETED|60000.0    |
+[info] |O009    |C004       |Anu  |Guntur       |PREMIUM|P004      |Keyboard    |Accessories|2000.0 |2       |2026-10-05|COMPLETED|4000.0     |
+[info] |O010    |C001       |Ravi |Hyderabad    |REGULAR|P005      |Monitor     |Electronics|15000.0|1       |2026-10-05|COMPLETED|15000.0    |
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-------+--------+----------+---------+-----------+
+[info] Completed Orders: 9
+[info] WINDOW FUNCTION RESULT
+[info] +--------+-----------+-----+----------+-----------+----------------------+---------------------+
+[info] |order_id|customer_id|name |order_date|order_value|running_customer_sales|customer_order_number|
+[info] +--------+-----------+-----+----------+-----------+----------------------+---------------------+
+[info] |O001    |C001       |Ravi |2026-10-01|60000.0    |60000.0               |1                    |
+[info] |O003    |C001       |Ravi |2026-10-02|6000.0     |66000.0               |2                    |
+[info] |O010    |C001       |Ravi |2026-10-05|15000.0    |81000.0               |3                    |
+[info] |O002    |C002       |Sita |2026-10-01|50000.0    |50000.0               |1                    |
+[info] |O006    |C002       |Sita |2026-10-03|9000.0     |59000.0               |2                    |
+[info] |O008    |C003       |Arjun|2026-10-04|60000.0    |60000.0               |1                    |
+[info] |O005    |C004       |Anu  |2026-10-03|30000.0    |30000.0               |1                    |
+[info] |O009    |C004       |Anu  |2026-10-05|4000.0     |34000.0               |2                    |
+[info] |O007    |C005       |Kiran|2026-10-04|25000.0    |25000.0               |1                    |
+[info] +--------+-----------+-----+----------+-----------+----------------------+---------------------+
+[info] CUSTOMER SALES
+[info] +-----------+-----+-------+------------+--------------+-----------+
+[info] |customer_id|name |segment|total_orders|total_quantity|total_sales|
+[info] +-----------+-----+-------+------------+--------------+-----------+
+[info] |C001       |Ravi |REGULAR|3           |4             |81000.0    |
+[info] |C003       |Arjun|REGULAR|1           |1             |60000.0    |
+[info] |C002       |Sita |PREMIUM|2           |5             |59000.0    |
+[info] |C004       |Anu  |PREMIUM|2           |4             |34000.0    |
+[info] |C005       |Kiran|REGULAR|1           |1             |25000.0    |
+[info] +-----------+-----+-------+------------+--------------+-----------+
+[info] CATEGORY SALES
+[info] +-----------+------------+--------------+-----------+
+[info] |category   |total_orders|total_quantity|total_sales|
+[info] +-----------+------------+--------------+-----------+
+[info] |Electronics|6           |8             |240000.0   |
+[info] |Accessories|3           |7             |19000.0    |
+[info] +-----------+------------+--------------+-----------+
+[info] Partitioned Orders Partitions: 2
+[info] PARTITION DISTRIBUTION
+[info] Partition 0 -> 5 records
+[info] Partition 1 -> 4 records
+[info] SPARK SQL REPORT
+[info] +-----------+------------+--------------+-----------+
+[info] |category   |total_orders|total_quantity|total_sales|
+[info] +-----------+------------+--------------+-----------+
+[info] |Electronics|6           |8             |240000.0   |
+[info] |Accessories|3           |7             |19000.0    |
+[info] +-----------+------------+--------------+-----------+
+[info] ======================================================
+[info] EXECUTION PLAN - CATEGORY SALES
+[info] ======================================================
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan (38)
+[info] +- Sort (37)
+[info]    +- Exchange (36)
+[info]       +- HashAggregate (35)
+[info]          +- Exchange (34)
+[info]             +- HashAggregate (33)
+[info]                +- InMemoryTableScan (1)
+[info]                      +- InMemoryRelation (2)
+[info]                            +- AdaptiveSparkPlan (32)
+[info]                               +- == Final Plan ==
+[info]                                  * Project (19)
+[info]                                  +- * BroadcastHashJoin Inner BuildRight (18)
+[info]                                     :- * Project (12)
+[info]                                     :  +- * BroadcastHashJoin Inner BuildRight (11)
+[info]                                     :     :- * Project (5)
+[info]                                     :     :  +- * Filter (4)
+[info]                                     :     :     +- Scan csv  (3)
+[info]                                     :     +- BroadcastQueryStage (10), Statistics(sizeInBytes=16.0 MiB, rowCount=5)
+[info]                                     :        +- BroadcastExchange (9)
+[info]                                     :           +- * Project (8)
+[info]                                     :              +- * Filter (7)
+[info]                                     :                 +- Scan csv  (6)
+[info]                                     +- BroadcastQueryStage (17), Statistics(sizeInBytes=16.0 MiB, rowCount=5)
+[info]                                        +- BroadcastExchange (16)
+[info]                                           +- * Project (15)
+[info]                                              +- * Filter (14)
+[info]                                                 +- Scan csv  (13)
+[info]                               +- == Initial Plan ==
+[info]                                  Project (31)
+[info]                                  +- BroadcastHashJoin Inner BuildRight (30)
+[info]                                     :- Project (26)
+[info]                                     :  +- BroadcastHashJoin Inner BuildRight (25)
+[info]                                     :     :- Project (21)
+[info]                                     :     :  +- Filter (20)
+[info]                                     :     :     +- Scan csv  (3)
+[info]                                     :     +- BroadcastExchange (24)
+[info]                                     :        +- Project (23)
+[info]                                     :           +- Filter (22)
+[info]                                     :              +- Scan csv  (6)
+[info]                                     +- BroadcastExchange (29)
+[info]                                        +- Project (28)
+[info]                                           +- Filter (27)
+[info]                                              +- Scan csv  (13)
+[info] (1) InMemoryTableScan
+[info] Output [4]: [order_id#126, category#119, quantity#129, order_value#249]
+[info] Arguments: [order_id#126, category#119, quantity#129, order_value#249]
+[info] (2) InMemoryRelation
+[info] Arguments: [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#129, order_date#130, status#131, order_value#249], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@228c854f,StorageLevel(memory, deserialized, 1 replicas),AdaptiveSparkPlan isFinalPlan=true
+[info] +- == Final Plan ==
+[info]    *(3) Project [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#70, order_date#130, status#131, (cast(quantity#70 as double) * price#120) AS order_value#249]
+[info]    +- *(3) BroadcastHashJoin [product_id#128], [product_id#117], Inner, BuildRight, false
+[info]       :- *(3) Project [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111]
+[info]       :  +- *(3) BroadcastHashJoin [customer_id#127], [customer_id#108], Inner, BuildRight, false
+[info]       :     :- *(3) Project [trim(order_id#67, None) AS order_id#126, trim(customer_id#68, None) AS customer_id#127, trim(product_id#69, None) AS product_id#128, quantity#70, cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date) AS order_date#130, upper(trim(status#72, None)) AS status#131]
+[info]       :     :  +- *(3) Filter ((((((isnotnull(trim(order_id#67, None)) AND isnotnull(trim(customer_id#68, None))) AND isnotnull(trim(product_id#69, None))) AND isnotnull(quantity#70)) AND (quantity#70 > 0)) AND isnotnull(cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date))) AND (upper(trim(status#72, None)) = COMPLETED))
+[info]       :     :     +- FileScan csv [order_id#67,customer_id#68,product_id#69,quantity#70,order_date#71,status#72] Batched: false, DataFilters: [isnotnull(trim(order_id#67, None)), isnotnull(trim(customer_id#68, None)), isnotnull(trim(produc..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), GreaterThan(quantity,0)], ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:s...
+[info]       :     +- BroadcastQueryStage 0
+[info]       :        +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=522]
+[info]       :           +- *(1) Project [trim(customer_id#17, None) AS customer_id#108, trim(name#18, None) AS name#109, trim(city#19, None) AS city#110, upper(trim(segment#20, None)) AS segment#111]
+[info]       :              +- *(1) Filter (isnotnull(trim(customer_id#17, None)) AND isnotnull(trim(name#18, None)))
+[info]       :                 +- FileScan csv [customer_id#17,name#18,city#19,segment#20] Batched: false, DataFilters: [isnotnull(trim(customer_id#17, None)), isnotnull(trim(name#18, None))], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info]       +- BroadcastQueryStage 1
+[info]          +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=543]
+[info]             +- *(2) Project [trim(product_id#42, None) AS product_id#117, trim(product_name#43, None) AS product_name#118, trim(category#44, None) AS category#119, cast(price#45 as double) AS price#120]
+[info]                +- *(2) Filter (((isnotnull(price#45) AND isnotnull(trim(product_id#42, None))) AND isnotnull(cast(price#45 as double))) AND (price#45 > 0))
+[info]                   +- FileScan csv [product_id#42,product_name#43,category#44,price#45] Batched: false, DataFilters: [isnotnull(price#45), isnotnull(trim(product_id#42, None)), isnotnull(cast(price#45 as double)), ..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [IsNotNull(price), GreaterThan(price,0)], ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] +- == Initial Plan ==
+[info]    Project [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#70, order_date#130, status#131, (cast(quantity#70 as double) * price#120) AS order_value#249]
+[info]    +- BroadcastHashJoin [product_id#128], [product_id#117], Inner, BuildRight, false
+[info]       :- Project [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111]
+[info]       :  +- BroadcastHashJoin [customer_id#127], [customer_id#108], Inner, BuildRight, false
+[info]       :     :- Project [trim(order_id#67, None) AS order_id#126, trim(customer_id#68, None) AS customer_id#127, trim(product_id#69, None) AS product_id#128, quantity#70, cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date) AS order_date#130, upper(trim(status#72, None)) AS status#131]
+[info]       :     :  +- Filter ((((((isnotnull(trim(order_id#67, None)) AND isnotnull(trim(customer_id#68, None))) AND isnotnull(trim(product_id#69, None))) AND isnotnull(quantity#70)) AND (quantity#70 > 0)) AND isnotnull(cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date))) AND (upper(trim(status#72, None)) = COMPLETED))
+[info]       :     :     +- FileScan csv [order_id#67,customer_id#68,product_id#69,quantity#70,order_date#71,status#72] Batched: false, DataFilters: [isnotnull(trim(order_id#67, None)), isnotnull(trim(customer_id#68, None)), isnotnull(trim(produc..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), GreaterThan(quantity,0)], ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:s...
+[info]       :     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=484]
+[info]       :        +- Project [trim(customer_id#17, None) AS customer_id#108, trim(name#18, None) AS name#109, trim(city#19, None) AS city#110, upper(trim(segment#20, None)) AS segment#111]
+[info]       :           +- Filter (isnotnull(trim(customer_id#17, None)) AND isnotnull(trim(name#18, None)))
+[info]       :              +- FileScan csv [customer_id#17,name#18,city#19,segment#20] Batched: false, DataFilters: [isnotnull(trim(customer_id#17, None)), isnotnull(trim(name#18, None))], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info]       +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=488]
+[info]          +- Project [trim(product_id#42, None) AS product_id#117, trim(product_name#43, None) AS product_name#118, trim(category#44, None) AS category#119, cast(price#45 as double) AS price#120]
+[info]             +- Filter (((isnotnull(price#45) AND isnotnull(trim(product_id#42, None))) AND isnotnull(cast(price#45 as double))) AND (price#45 > 0))
+[info]                +- FileScan csv [product_id#42,product_name#43,category#44,price#45] Batched: false, DataFilters: [isnotnull(price#45), isnotnull(trim(product_id#42, None)), isnotnull(cast(price#45 as double)), ..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Comme..., PartitionFilters: [], PushedFilters: [IsNotNull(price), GreaterThan(price,0)], ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] ,None)
+[info] (3) Scan csv 
+[info] Output [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/data/orders.csv]
+[info] PushedFilters: [IsNotNull(quantity), GreaterThan(quantity,0)]
+[info] ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:string>
+[info] (4) Filter [codegen id : 3]
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Condition : ((((((isnotnull(trim(order_id#67, None)) AND isnotnull(trim(customer_id#68, None))) AND isnotnull(trim(product_id#69, None))) AND isnotnull(quantity#70)) AND (quantity#70 > 0)) AND isnotnull(cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date))) AND (upper(trim(status#72, None)) = COMPLETED))
+[info] (5) Project [codegen id : 3]
+[info] Output [6]: [trim(order_id#67, None) AS order_id#126, trim(customer_id#68, None) AS customer_id#127, trim(product_id#69, None) AS product_id#128, quantity#70, cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date) AS order_date#130, upper(trim(status#72, None)) AS status#131]
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] (6) Scan csv 
+[info] Output [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/data/customers.csv]
+[info] ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info] (7) Filter [codegen id : 1]
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Condition : (isnotnull(trim(customer_id#17, None)) AND isnotnull(trim(name#18, None)))
+[info] (8) Project [codegen id : 1]
+[info] Output [4]: [trim(customer_id#17, None) AS customer_id#108, trim(name#18, None) AS name#109, trim(city#19, None) AS city#110, upper(trim(segment#20, None)) AS segment#111]
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] (9) BroadcastExchange
+[info] Input [4]: [customer_id#108, name#109, city#110, segment#111]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=522]
+[info] (10) BroadcastQueryStage
+[info] Output [4]: [customer_id#108, name#109, city#110, segment#111]
+[info] Arguments: 0
+[info] (11) BroadcastHashJoin [codegen id : 3]
+[info] Left keys [1]: [customer_id#127]
+[info] Right keys [1]: [customer_id#108]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (12) Project [codegen id : 3]
+[info] Output [9]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111]
+[info] Input [10]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, customer_id#108, name#109, city#110, segment#111]
+[info] (13) Scan csv 
+[info] Output [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/data/products.csv]
+[info] PushedFilters: [IsNotNull(price), GreaterThan(price,0)]
+[info] ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] (14) Filter [codegen id : 2]
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Condition : (((isnotnull(price#45) AND isnotnull(trim(product_id#42, None))) AND isnotnull(cast(price#45 as double))) AND (price#45 > 0))
+[info] (15) Project [codegen id : 2]
+[info] Output [4]: [trim(product_id#42, None) AS product_id#117, trim(product_name#43, None) AS product_name#118, trim(category#44, None) AS category#119, cast(price#45 as double) AS price#120]
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] (16) BroadcastExchange
+[info] Input [4]: [product_id#117, product_name#118, category#119, price#120]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=543]
+[info] (17) BroadcastQueryStage
+[info] Output [4]: [product_id#117, product_name#118, category#119, price#120]
+[info] Arguments: 1
+[info] (18) BroadcastHashJoin [codegen id : 3]
+[info] Left keys [1]: [product_id#128]
+[info] Right keys [1]: [product_id#117]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (19) Project [codegen id : 3]
+[info] Output [13]: [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#70, order_date#130, status#131, (cast(quantity#70 as double) * price#120) AS order_value#249]
+[info] Input [13]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111, product_id#117, product_name#118, category#119, price#120]
+[info] (20) Filter
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Condition : ((((((isnotnull(trim(order_id#67, None)) AND isnotnull(trim(customer_id#68, None))) AND isnotnull(trim(product_id#69, None))) AND isnotnull(quantity#70)) AND (quantity#70 > 0)) AND isnotnull(cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date))) AND (upper(trim(status#72, None)) = COMPLETED))
+[info] (21) Project
+[info] Output [6]: [trim(order_id#67, None) AS order_id#126, trim(customer_id#68, None) AS customer_id#127, trim(product_id#69, None) AS product_id#128, quantity#70, cast(gettimestamp(trim(cast(order_date#71 as string), None), yyyy-MM-dd, TimestampType, Some(Etc/UTC), false) as date) AS order_date#130, upper(trim(status#72, None)) AS status#131]
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] (22) Filter
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Condition : (isnotnull(trim(customer_id#17, None)) AND isnotnull(trim(name#18, None)))
+[info] (23) Project
+[info] Output [4]: [trim(customer_id#17, None) AS customer_id#108, trim(name#18, None) AS name#109, trim(city#19, None) AS city#110, upper(trim(segment#20, None)) AS segment#111]
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] (24) BroadcastExchange
+[info] Input [4]: [customer_id#108, name#109, city#110, segment#111]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=484]
+[info] (25) BroadcastHashJoin
+[info] Left keys [1]: [customer_id#127]
+[info] Right keys [1]: [customer_id#108]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (26) Project
+[info] Output [9]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111]
+[info] Input [10]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, customer_id#108, name#109, city#110, segment#111]
+[info] (27) Filter
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Condition : (((isnotnull(price#45) AND isnotnull(trim(product_id#42, None))) AND isnotnull(cast(price#45 as double))) AND (price#45 > 0))
+[info] (28) Project
+[info] Output [4]: [trim(product_id#42, None) AS product_id#117, trim(product_name#43, None) AS product_name#118, trim(category#44, None) AS category#119, cast(price#45 as double) AS price#120]
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] (29) BroadcastExchange
+[info] Input [4]: [product_id#117, product_name#118, category#119, price#120]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=488]
+[info] (30) BroadcastHashJoin
+[info] Left keys [1]: [product_id#128]
+[info] Right keys [1]: [product_id#117]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (31) Project
+[info] Output [13]: [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#70, order_date#130, status#131, (cast(quantity#70 as double) * price#120) AS order_value#249]
+[info] Input [13]: [order_id#126, customer_id#127, product_id#128, quantity#70, order_date#130, status#131, name#109, city#110, segment#111, product_id#117, product_name#118, category#119, price#120]
+[info] (32) AdaptiveSparkPlan
+[info] Output [13]: [order_id#126, customer_id#127, name#109, city#110, segment#111, product_id#128, product_name#118, category#119, price#120, quantity#70, order_date#130, status#131, order_value#249]
+[info] Arguments: isFinalPlan=true
+[info] (33) HashAggregate
+[info] Input [4]: [order_id#126, category#119, quantity#129, order_value#249]
+[info] Keys [1]: [category#119]
+[info] Functions [3]: [partial_count(order_id#126), partial_sum(quantity#129), partial_sum(order_value#249)]
+[info] Aggregate Attributes [3]: [count#1769L, sum#1770L, sum#1771]
+[info] Results [4]: [category#119, count#1772L, sum#1773L, sum#1774]
+[info] (34) Exchange
+[info] Input [4]: [category#119, count#1772L, sum#1773L, sum#1774]
+[info] Arguments: hashpartitioning(category#119, 200), ENSURE_REQUIREMENTS, [plan_id=1001]
+[info] (35) HashAggregate
+[info] Input [4]: [category#119, count#1772L, sum#1773L, sum#1774]
+[info] Keys [1]: [category#119]
+[info] Functions [3]: [count(order_id#126), sum(quantity#129), sum(order_value#249)]
+[info] Aggregate Attributes [3]: [count(order_id#126)#1551L, sum(quantity#129)#1554L, sum(order_value#249)#1556]
+[info] Results [4]: [category#119, count(order_id#126)#1551L AS total_orders#1553L, sum(quantity#129)#1554L AS total_quantity#1555L, round(sum(order_value#249)#1556, 2) AS total_sales#1557]
+[info] (36) Exchange
+[info] Input [4]: [category#119, total_orders#1553L, total_quantity#1555L, total_sales#1557]
+[info] Arguments: rangepartitioning(total_sales#1557 DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=1004]
+[info] (37) Sort
+[info] Input [4]: [category#119, total_orders#1553L, total_quantity#1555L, total_sales#1557]
+[info] Arguments: [total_sales#1557 DESC NULLS LAST], true, 0
+[info] (38) AdaptiveSparkPlan
+[info] Output [4]: [category#119, total_orders#1553L, total_quantity#1555L, total_sales#1557]
+[info] Arguments: isFinalPlan=false
+[info] ======================================================
+[info] SHUFFLE, STAGE AND OPTIMIZATION EXPLANATION
+[info] ======================================================
+[info] 1. SHUFFLES
+[info]    - reduceByKey causes a shuffle because records with the same
+[info]      category key must be brought together.
+[info]    - Joins may cause shuffle when Spark redistributes records
+[info]      according to join keys.
+[info]    - groupBy operations cause shuffle because records must be
+[info]      grouped by their keys.
+[info]    - Window functions require partitioning and sorting based on
+[info]      the window specification.
+[info]    - repartition(2, customer_id) intentionally redistributes
+[info]      records using customer_id.
+[info] 2. STAGES
+[info]    - Spark divides execution into stages at shuffle boundaries.
+[info]    - Narrow transformations can execute within the same stage.
+[info]    - Shuffle operations create stage boundaries.
+[info]    - Each stage is executed using tasks.
+[info] 3. PERSISTENCE
+[info]    - completedOrders is persisted because it is reused by
+[info]      multiple downstream operations.
+[info]    - This avoids recomputing the same upstream transformations.
+[info] 4. PARTITIONING
+[info]    - repartition(2, customer_id) distributes records according
+[info]      to customer_id.
+[info]    - This can help later customer-based processing.
+[info] 5. OPTIMIZATION
+[info]    - Only required columns are selected.
+[info]    - Invalid records are filtered during cleaning.
+[info]    - Data types are converted before processing.
+[info]    - COMPLETED orders are filtered before downstream analytics.
+[info]    - Persistence is used for reused data.
+[info]    - Spark SQL/DataFrame operations benefit from Catalyst
+[info]      optimization and Tungsten execution.
+[info] 6. UDF
+[info]    - No custom UDF is required.
+[info]    - Built-in Spark functions are sufficient for this project.
+[info] ======================================================
+[info] FINAL PROJECT SUMMARY
+[info] ======================================================
+[info] Pipeline:
+[info] RAW -> CLEAN -> ENRICH -> AGGREGATE
+[info] RDD Component:
+[info] Product category price aggregation using Pair RDD
+[info] DataFrame Component:
+[info] Cleaning, joins, enrichment, aggregation and windows
+[info] Window Operations:
+[info] Running customer sales and customer order number
+[info] Partitioning:
+[info] repartition(2, customer_id)
+[info] Persistence:
+[info] MEMORY_ONLY
+[info] SQL Reporting:
+[info] Category-wise completed order sales
+[info] UDF:
+[info] Not required; built-in Spark functions are sufficient
+[info] Project completed successfully.
+[success] Total time: 24 s, completed Oct 12, 2026, 6:18:03 AM
