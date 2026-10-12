@@ -1,0 +1,594 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-Commerce/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-30-Final-Capstone-E-Commerce (in build file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-Commerce/)
+[info] running (fork) Main 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/10/12 06:41:45 WARN Utils: Your hostname, MONI resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/10/12 06:41:45 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/10/12 06:41:45 INFO SparkContext: Running Spark version 3.5.6
+[error] 26/10/12 06:41:45 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 06:41:45 INFO SparkContext: Java version 17.0.20
+[error] 26/10/12 06:41:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/10/12 06:41:46 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 06:41:46 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/10/12 06:41:46 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 06:41:46 INFO SparkContext: Submitted application: Day-30-Final-Capstone-E-Commerce
+[error] 26/10/12 06:41:46 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/10/12 06:41:46 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/10/12 06:41:46 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/10/12 06:41:46 INFO SecurityManager: Changing view acls to: mohit
+[error] 26/10/12 06:41:46 INFO SecurityManager: Changing modify acls to: mohit
+[error] 26/10/12 06:41:46 INFO SecurityManager: Changing view acls groups to: 
+[error] 26/10/12 06:41:46 INFO SecurityManager: Changing modify acls groups to: 
+[error] 26/10/12 06:41:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: mohit; groups with view permissions: EMPTY; users with modify permissions: mohit; groups with modify permissions: EMPTY
+[error] 26/10/12 06:41:46 INFO Utils: Successfully started service 'sparkDriver' on port 45485.
+[error] 26/10/12 06:41:47 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/10/12 06:41:47 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/10/12 06:41:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/10/12 06:41:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/10/12 06:41:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/10/12 06:41:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d8aa7a23-ff3a-4ec3-91cb-5f716274dd11
+[error] 26/10/12 06:41:47 INFO MemoryStore: MemoryStore started with capacity 849.6 MiB
+[error] 26/10/12 06:41:47 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/10/12 06:41:47 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/10/12 06:41:47 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/10/12 06:41:47 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/10/12 06:41:47 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 06:41:47 INFO Executor: Java version 17.0.20
+[error] 26/10/12 06:41:47 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/10/12 06:41:47 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@76ad6715 for default.
+[error] 26/10/12 06:41:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38853.
+[error] 26/10/12 06:41:47 INFO NettyBlockTransferService: Server created on 10.255.255.254:38853
+[error] 26/10/12 06:41:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/10/12 06:41:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 38853, None)
+[error] 26/10/12 06:41:47 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:38853 with 849.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 38853, None)
+[error] 26/10/12 06:41:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 38853, None)
+[error] 26/10/12 06:41:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 38853, None)
+[info] ======================================================================
+[info] DAY 30 - FINAL CAPSTONE E-COMMERCE DATA ENGINEERING
+[info] ======================================================================
+[info] --- RAW DATA COUNTS ---
+[info] Customers: 5
+[info] Products : 5
+[info] Orders   : 10
+[info] --- CLEAN DATA COUNTS ---
+[info] Customers: 5
+[info] Products : 5
+[info] Orders   : 10
+[info] --- ACCUMULATOR ---
+[info] Cancelled orders counted by accumulator: 1
+[info] --- BROADCAST VARIABLE ---
+[info] Broadcast product prices: Map(P002 -> 25000.0, P001 -> 60000.0, P005 -> 15000.0, P004 -> 2000.0, P003 -> 3000.0)
+[info] --- ENRICHED ORDERS ---
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-----+--------+----------+---------+-----------+
+[info] |order_id|customer_id|name |city         |segment|product_id|product_name|category   |price|quantity|order_date|status   |order_value|
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-----+--------+----------+---------+-----------+
+[info] |O001    |C001       |Ravi |Hyderabad    |Regular|P001      |Laptop      |Electronics|60000|1       |2026-10-01|COMPLETED|60000      |
+[info] |O002    |C002       |Sita |Vijayawada   |Premium|P002      |Mobile      |Electronics|25000|2       |2026-10-01|COMPLETED|50000      |
+[info] |O003    |C001       |Ravi |Hyderabad    |Regular|P003      |Headphones  |Accessories|3000 |2       |2026-10-02|COMPLETED|6000       |
+[info] |O004    |C003       |Arjun|Visakhapatnam|Regular|P004      |Keyboard    |Accessories|2000 |1       |2026-10-02|CANCELLED|2000       |
+[info] |O005    |C004       |Anu  |Guntur       |Premium|P005      |Monitor     |Electronics|15000|2       |2026-10-03|COMPLETED|30000      |
+[info] |O006    |C002       |Sita |Vijayawada   |Premium|P003      |Headphones  |Accessories|3000 |3       |2026-10-03|COMPLETED|9000       |
+[info] |O007    |C005       |Kiran|Warangal     |Regular|P002      |Mobile      |Electronics|25000|1       |2026-10-04|COMPLETED|25000      |
+[info] |O008    |C003       |Arjun|Visakhapatnam|Regular|P001      |Laptop      |Electronics|60000|1       |2026-10-04|COMPLETED|60000      |
+[info] |O009    |C004       |Anu  |Guntur       |Premium|P004      |Keyboard    |Accessories|2000 |2       |2026-10-05|COMPLETED|4000       |
+[info] |O010    |C001       |Ravi |Hyderabad    |Regular|P005      |Monitor     |Electronics|15000|1       |2026-10-05|COMPLETED|15000      |
+[info] +--------+-----------+-----+-------------+-------+----------+------------+-----------+-----+--------+----------+---------+-----------+
+[info] --- UDF RESULT ---
+[info] +-----------+-----+-------+-------------+
+[info] |customer_id|name |segment|customer_tier|
+[info] +-----------+-----+-------+-------------+
+[info] |C001       |Ravi |Regular|STANDARD     |
+[info] |C002       |Sita |Premium|VIP          |
+[info] |C001       |Ravi |Regular|STANDARD     |
+[info] |C003       |Arjun|Regular|STANDARD     |
+[info] |C004       |Anu  |Premium|VIP          |
+[info] |C002       |Sita |Premium|VIP          |
+[info] |C005       |Kiran|Regular|STANDARD     |
+[info] |C003       |Arjun|Regular|STANDARD     |
+[info] |C004       |Anu  |Premium|VIP          |
+[info] |C001       |Ravi |Regular|STANDARD     |
+[info] +-----------+-----+-------+-------------+
+[info] --- CACHE / PERSIST ---
+[info] Completed orders: 9
+[info] Completed orders persisted using MEMORY_AND_DISK
+[info] --- WINDOW FUNCTION RESULT ---
+[info] +--------+-----------+----------+-----------+-------------+-------------------+
+[info] |order_id|customer_id|order_date|order_value|running_sales|customer_order_rank|
+[info] +--------+-----------+----------+-----------+-------------+-------------------+
+[info] |O001    |C001       |2026-10-01|60000      |60000        |1                  |
+[info] |O003    |C001       |2026-10-02|6000       |66000        |2                  |
+[info] |O010    |C001       |2026-10-05|15000      |81000        |3                  |
+[info] |O002    |C002       |2026-10-01|50000      |50000        |1                  |
+[info] |O006    |C002       |2026-10-03|9000       |59000        |2                  |
+[info] |O008    |C003       |2026-10-04|60000      |60000        |1                  |
+[info] |O005    |C004       |2026-10-03|30000      |30000        |1                  |
+[info] |O009    |C004       |2026-10-05|4000       |34000        |2                  |
+[info] |O007    |C005       |2026-10-04|25000      |25000        |1                  |
+[info] +--------+-----------+----------+-----------+-------------+-------------------+
+[info] --- CUSTOMER SALES ---
+[info] +-----------+-----+-------------+-----------+------------+--------------+
+[info] |customer_id|name |customer_tier|total_sales|total_orders|total_quantity|
+[info] +-----------+-----+-------------+-----------+------------+--------------+
+[info] |C001       |Ravi |STANDARD     |81000      |3           |4             |
+[info] |C003       |Arjun|STANDARD     |60000      |1           |1             |
+[info] |C002       |Sita |VIP          |59000      |2           |5             |
+[info] |C004       |Anu  |VIP          |34000      |2           |4             |
+[info] |C005       |Kiran|STANDARD     |25000      |1           |1             |
+[info] +-----------+-----+-------------+-----------+------------+--------------+
+[info] --- CATEGORY SALES ---
+[info] +-----------+--------------+-----------+-------------+
+[info] |category   |category_sales|order_count|quantity_sold|
+[info] +-----------+--------------+-----------+-------------+
+[info] |Electronics|240000        |6          |8            |
+[info] |Accessories|19000         |3          |7            |
+[info] +-----------+--------------+-----------+-------------+
+[info] --- PARTITION TUNING ---
+[info] Partitions after repartition: 2
+[info] Partition 0 -> 5 records
+[info] Partition 1 -> 4 records
+[info] --- SPARK SQL REPORT ---
+[info] +-----------+-----------+------------+--------------+
+[info] |category   |total_sales|total_orders|total_quantity|
+[info] +-----------+-----------+------------+--------------+
+[info] |Electronics|240000     |6           |8             |
+[info] |Accessories|19000      |3           |7             |
+[info] +-----------+-----------+------------+--------------+
+[info] --- BROADCAST JOIN ---
+[info] +--------+----------+-----------+----------------+
+[info] |order_id|product_id|order_value|product_category|
+[info] +--------+----------+-----------+----------------+
+[info] |O010    |P005      |15000      |Electronics     |
+[info] |O005    |P005      |30000      |Electronics     |
+[info] |O009    |P004      |4000       |Accessories     |
+[info] |O002    |P002      |50000      |Electronics     |
+[info] |O001    |P001      |60000      |Electronics     |
+[info] |O008    |P001      |60000      |Electronics     |
+[info] |O007    |P002      |25000      |Electronics     |
+[info] |O006    |P003      |9000       |Accessories     |
+[info] |O003    |P003      |6000       |Accessories     |
+[info] +--------+----------+-----------+----------------+
+[info] --- PHYSICAL PLAN ---
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan (71)
+[info] +- Sort (70)
+[info]    +- Exchange (69)
+[info]       +- HashAggregate (68)
+[info]          +- Exchange (67)
+[info]             +- HashAggregate (66)
+[info]                +- InMemoryTableScan (1)
+[info]                      +- InMemoryRelation (2)
+[info]                            +- AdaptiveSparkPlan (65)
+[info]                               +- == Final Plan ==
+[info]                                  * Project (38)
+[info]                                  +- * BroadcastHashJoin Inner BuildRight (37)
+[info]                                     :- * Project (24)
+[info]                                     :  +- * BroadcastHashJoin Inner BuildRight (23)
+[info]                                     :     :- * Filter (10)
+[info]                                     :     :  +- SortAggregate (9)
+[info]                                     :     :     +- * Sort (8)
+[info]                                     :     :        +- ShuffleQueryStage (7), Statistics(sizeInBytes=1360.0 B, rowCount=10)
+[info]                                     :     :           +- Exchange (6)
+[info]                                     :     :              +- SortAggregate (5)
+[info]                                     :     :                 +- * Sort (4)
+[info]                                     :     :                    +- Scan csv  (3)
+[info]                                     :     +- BroadcastQueryStage (22), Statistics(sizeInBytes=16.0 MiB, rowCount=5)
+[info]                                     :        +- BroadcastExchange (21)
+[info]                                     :           +- * Filter (20)
+[info]                                     :              +- SortAggregate (19)
+[info]                                     :                 +- * Sort (18)
+[info]                                     :                    +- AQEShuffleRead (17)
+[info]                                     :                       +- ShuffleQueryStage (16), Statistics(sizeInBytes=504.0 B, rowCount=5)
+[info]                                     :                          +- Exchange (15)
+[info]                                     :                             +- SortAggregate (14)
+[info]                                     :                                +- * Sort (13)
+[info]                                     :                                   +- * Filter (12)
+[info]                                     :                                      +- Scan csv  (11)
+[info]                                     +- BroadcastQueryStage (36), Statistics(sizeInBytes=16.0 MiB, rowCount=5)
+[info]                                        +- BroadcastExchange (35)
+[info]                                           +- * Filter (34)
+[info]                                              +- SortAggregate (33)
+[info]                                                 +- * Sort (32)
+[info]                                                    +- AQEShuffleRead (31)
+[info]                                                       +- ShuffleQueryStage (30), Statistics(sizeInBytes=488.0 B, rowCount=5)
+[info]                                                          +- Exchange (29)
+[info]                                                             +- SortAggregate (28)
+[info]                                                                +- * Sort (27)
+[info]                                                                   +- * Filter (26)
+[info]                                                                      +- Scan csv  (25)
+[info]                               +- == Initial Plan ==
+[info]                                  Project (64)
+[info]                                  +- BroadcastHashJoin Inner BuildRight (63)
+[info]                                     :- Project (54)
+[info]                                     :  +- BroadcastHashJoin Inner BuildRight (53)
+[info]                                     :     :- Filter (44)
+[info]                                     :     :  +- SortAggregate (43)
+[info]                                     :     :     +- Sort (42)
+[info]                                     :     :        +- Exchange (41)
+[info]                                     :     :           +- SortAggregate (40)
+[info]                                     :     :              +- Sort (39)
+[info]                                     :     :                 +- Scan csv  (3)
+[info]                                     :     +- BroadcastExchange (52)
+[info]                                     :        +- Filter (51)
+[info]                                     :           +- SortAggregate (50)
+[info]                                     :              +- Sort (49)
+[info]                                     :                 +- Exchange (48)
+[info]                                     :                    +- SortAggregate (47)
+[info]                                     :                       +- Sort (46)
+[info]                                     :                          +- Filter (45)
+[info]                                     :                             +- Scan csv  (11)
+[info]                                     +- BroadcastExchange (62)
+[info]                                        +- Filter (61)
+[info]                                           +- SortAggregate (60)
+[info]                                              +- Sort (59)
+[info]                                                 +- Exchange (58)
+[info]                                                    +- SortAggregate (57)
+[info]                                                       +- Sort (56)
+[info]                                                          +- Filter (55)
+[info]                                                             +- Scan csv  (25)
+[info] (1) InMemoryTableScan
+[info] Output [4]: [order_id#482, category#489, quantity#491, order_value#506]
+[info] Arguments: [order_id#482, category#489, quantity#491, order_value#506]
+[info] (2) InMemoryRelation
+[info] Arguments: [order_id#482, customer_id#483, name#484, city#485, segment#486, product_id#487, product_name#488, category#489, price#490, quantity#491, order_date#492, status#493, order_value#506, customer_tier#723], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@f5475d7,StorageLevel(disk, memory, deserialized, 1 replicas),AdaptiveSparkPlan isFinalPlan=true
+[info] +- == Final Plan ==
+[info]    *(9) Project [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, product_name#927, category#929, price#931, quantity#915, order_date#917, status#919, (quantity#915 * price#931) AS order_value#506, UDF(segment#925) AS customer_tier#723]
+[info]    +- *(9) BroadcastHashJoin [product_id#913], [product_id#42], Inner, BuildRight, false
+[info]       :- *(9) Project [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919]
+[info]       :  +- *(9) BroadcastHashJoin [customer_id#911], [customer_id#17], Inner, BuildRight, false
+[info]       :     :- *(9) Filter (((isnotnull(quantity#915) AND isnotnull(status#919)) AND ((quantity#915 > 0) AND (atleastnnonnulls(6, order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919) AND (status#919 = COMPLETED)))) AND (isnotnull(customer_id#911) AND isnotnull(product_id#913)))
+[info]       :     :  +- SortAggregate(key=[order_id#67], functions=[first(customer_id#68, false), first(product_id#69, false), first(quantity#70, false), first(order_date#71, false), first(status#72, false)], output=[order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919])
+[info]       :     :     +- *(8) Sort [order_id#67 ASC NULLS FIRST], false, 0
+[info]       :     :        +- ShuffleQueryStage 0
+[info]       :     :           +- Exchange hashpartitioning(order_id#67, 200), ENSURE_REQUIREMENTS, [plan_id=1820]
+[info]       :     :              +- SortAggregate(key=[order_id#67], functions=[partial_first(customer_id#68, false), partial_first(product_id#69, false), partial_first(quantity#70, false), partial_first(order_date#71, false), partial_first(status#72, false)], output=[order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951])
+[info]       :     :                 +- *(1) Sort [order_id#67 ASC NULLS FIRST], false, 0
+[info]       :     :                    +- FileScan csv [order_id#67,customer_id#68,product_id#69,quantity#70,order_date#71,status#72] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:s...
+[info]       :     +- BroadcastQueryStage 3
+[info]       :        +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=2003]
+[info]       :           +- *(5) Filter atleastnnonnulls(4, customer_id#17, name#921, city#923, segment#925)
+[info]       :              +- SortAggregate(key=[customer_id#17], functions=[first(name#18, false), first(city#19, false), first(segment#20, false)], output=[customer_id#17, name#921, city#923, segment#925])
+[info]       :                 +- *(4) Sort [customer_id#17 ASC NULLS FIRST], false, 0
+[info]       :                    +- AQEShuffleRead coalesced
+[info]       :                       +- ShuffleQueryStage 1
+[info]       :                          +- Exchange hashpartitioning(customer_id#17, 200), ENSURE_REQUIREMENTS, [plan_id=1854]
+[info]       :                             +- SortAggregate(key=[customer_id#17], functions=[partial_first(name#18, false), partial_first(city#19, false), partial_first(segment#20, false)], output=[customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963])
+[info]       :                                +- *(2) Sort [customer_id#17 ASC NULLS FIRST], false, 0
+[info]       :                                   +- *(2) Filter isnotnull(customer_id#17)
+[info]       :                                      +- FileScan csv [customer_id#17,name#18,city#19,segment#20] Batched: false, DataFilters: [isnotnull(customer_id#17)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info]       +- BroadcastQueryStage 4
+[info]          +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=2059]
+[info]             +- *(7) Filter atleastnnonnulls(4, product_id#42, product_name#927, category#929, price#931)
+[info]                +- SortAggregate(key=[product_id#42], functions=[first(product_name#43, false), first(category#44, false), first(price#45, false)], output=[product_id#42, product_name#927, category#929, price#931])
+[info]                   +- *(6) Sort [product_id#42 ASC NULLS FIRST], false, 0
+[info]                      +- AQEShuffleRead coalesced
+[info]                         +- ShuffleQueryStage 2
+[info]                            +- Exchange hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=1893]
+[info]                               +- SortAggregate(key=[product_id#42], functions=[partial_first(product_name#43, false), partial_first(category#44, false), partial_first(price#45, false)], output=[product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975])
+[info]                                  +- *(3) Sort [product_id#42 ASC NULLS FIRST], false, 0
+[info]                                     +- *(3) Filter isnotnull(product_id#42)
+[info]                                        +- FileScan csv [product_id#42,product_name#43,category#44,price#45] Batched: false, DataFilters: [isnotnull(product_id#42)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [IsNotNull(product_id)], ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] +- == Initial Plan ==
+[info]    Project [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, product_name#927, category#929, price#931, quantity#915, order_date#917, status#919, (quantity#915 * price#931) AS order_value#506, UDF(segment#925) AS customer_tier#723]
+[info]    +- BroadcastHashJoin [product_id#913], [product_id#42], Inner, BuildRight, false
+[info]       :- Project [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919]
+[info]       :  +- BroadcastHashJoin [customer_id#911], [customer_id#17], Inner, BuildRight, false
+[info]       :     :- Filter (((isnotnull(quantity#915) AND isnotnull(status#919)) AND ((quantity#915 > 0) AND (atleastnnonnulls(6, order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919) AND (status#919 = COMPLETED)))) AND (isnotnull(customer_id#911) AND isnotnull(product_id#913)))
+[info]       :     :  +- SortAggregate(key=[order_id#67], functions=[first(customer_id#68, false), first(product_id#69, false), first(quantity#70, false), first(order_date#71, false), first(status#72, false)], output=[order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919])
+[info]       :     :     +- Sort [order_id#67 ASC NULLS FIRST], false, 0
+[info]       :     :        +- Exchange hashpartitioning(order_id#67, 200), ENSURE_REQUIREMENTS, [plan_id=1762]
+[info]       :     :           +- SortAggregate(key=[order_id#67], functions=[partial_first(customer_id#68, false), partial_first(product_id#69, false), partial_first(quantity#70, false), partial_first(order_date#71, false), partial_first(status#72, false)], output=[order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951])
+[info]       :     :              +- Sort [order_id#67 ASC NULLS FIRST], false, 0
+[info]       :     :                 +- FileScan csv [order_id#67,customer_id#68,product_id#69,quantity#70,order_date#71,status#72] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:s...
+[info]       :     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=1774]
+[info]       :        +- Filter atleastnnonnulls(4, customer_id#17, name#921, city#923, segment#925)
+[info]       :           +- SortAggregate(key=[customer_id#17], functions=[first(name#18, false), first(city#19, false), first(segment#20, false)], output=[customer_id#17, name#921, city#923, segment#925])
+[info]       :              +- Sort [customer_id#17 ASC NULLS FIRST], false, 0
+[info]       :                 +- Exchange hashpartitioning(customer_id#17, 200), ENSURE_REQUIREMENTS, [plan_id=1769]
+[info]       :                    +- SortAggregate(key=[customer_id#17], functions=[partial_first(name#18, false), partial_first(city#19, false), partial_first(segment#20, false)], output=[customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963])
+[info]       :                       +- Sort [customer_id#17 ASC NULLS FIRST], false, 0
+[info]       :                          +- Filter isnotnull(customer_id#17)
+[info]       :                             +- FileScan csv [customer_id#17,name#18,city#19,segment#20] Batched: false, DataFilters: [isnotnull(customer_id#17)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info]       +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=1785]
+[info]          +- Filter atleastnnonnulls(4, product_id#42, product_name#927, category#929, price#931)
+[info]             +- SortAggregate(key=[product_id#42], functions=[first(product_name#43, false), first(category#44, false), first(price#45, false)], output=[product_id#42, product_name#927, category#929, price#931])
+[info]                +- Sort [product_id#42 ASC NULLS FIRST], false, 0
+[info]                   +- Exchange hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=1780]
+[info]                      +- SortAggregate(key=[product_id#42], functions=[partial_first(product_name#43, false), partial_first(category#44, false), partial_first(price#45, false)], output=[product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975])
+[info]                         +- Sort [product_id#42 ASC NULLS FIRST], false, 0
+[info]                            +- Filter isnotnull(product_id#42)
+[info]                               +- FileScan csv [product_id#42,product_name#43,category#44,price#45] Batched: false, DataFilters: [isnotnull(product_id#42)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-C..., PartitionFilters: [], PushedFilters: [IsNotNull(product_id)], ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] ,None)
+[info] (3) Scan csv 
+[info] Output [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-Commerce/data/orders.csv]
+[info] ReadSchema: struct<order_id:string,customer_id:string,product_id:string,quantity:int,order_date:date,status:string>
+[info] (4) Sort [codegen id : 1]
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Arguments: [order_id#67 ASC NULLS FIRST], false, 0
+[info] (5) SortAggregate
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Keys [1]: [order_id#67]
+[info] Functions [5]: [partial_first(customer_id#68, false), partial_first(product_id#69, false), partial_first(quantity#70, false), partial_first(order_date#71, false), partial_first(status#72, false)]
+[info] Aggregate Attributes [10]: [first#932, valueSet#933, first#934, valueSet#935, first#936, valueSet#937, first#938, valueSet#939, first#940, valueSet#941]
+[info] Results [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] (6) Exchange
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Arguments: hashpartitioning(order_id#67, 200), ENSURE_REQUIREMENTS, [plan_id=1820]
+[info] (7) ShuffleQueryStage
+[info] Output [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Arguments: 0
+[info] (8) Sort [codegen id : 8]
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Arguments: [order_id#67 ASC NULLS FIRST], false, 0
+[info] (9) SortAggregate
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Keys [1]: [order_id#67]
+[info] Functions [5]: [first(customer_id#68, false), first(product_id#69, false), first(quantity#70, false), first(order_date#71, false), first(status#72, false)]
+[info] Aggregate Attributes [5]: [first(customer_id#68)()#910, first(product_id#69)()#912, first(quantity#70)()#914, first(order_date#71)()#916, first(status#72)()#918]
+[info] Results [6]: [order_id#67, first(customer_id#68)()#910 AS customer_id#911, first(product_id#69)()#912 AS product_id#913, first(quantity#70)()#914 AS quantity#915, first(order_date#71)()#916 AS order_date#917, first(status#72)()#918 AS status#919]
+[info] (10) Filter [codegen id : 9]
+[info] Input [6]: [order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919]
+[info] Condition : (((isnotnull(quantity#915) AND isnotnull(status#919)) AND ((quantity#915 > 0) AND (atleastnnonnulls(6, order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919) AND (status#919 = COMPLETED)))) AND (isnotnull(customer_id#911) AND isnotnull(product_id#913)))
+[info] (11) Scan csv 
+[info] Output [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-Commerce/data/customers.csv]
+[info] PushedFilters: [IsNotNull(customer_id)]
+[info] ReadSchema: struct<customer_id:string,name:string,city:string,segment:string>
+[info] (12) Filter [codegen id : 2]
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Condition : isnotnull(customer_id#17)
+[info] (13) Sort [codegen id : 2]
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Arguments: [customer_id#17 ASC NULLS FIRST], false, 0
+[info] (14) SortAggregate
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Keys [1]: [customer_id#17]
+[info] Functions [3]: [partial_first(name#18, false), partial_first(city#19, false), partial_first(segment#20, false)]
+[info] Aggregate Attributes [6]: [first#952, valueSet#953, first#954, valueSet#955, first#956, valueSet#957]
+[info] Results [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] (15) Exchange
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: hashpartitioning(customer_id#17, 200), ENSURE_REQUIREMENTS, [plan_id=1854]
+[info] (16) ShuffleQueryStage
+[info] Output [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: 1
+[info] (17) AQEShuffleRead
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: coalesced
+[info] (18) Sort [codegen id : 4]
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: [customer_id#17 ASC NULLS FIRST], false, 0
+[info] (19) SortAggregate
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Keys [1]: [customer_id#17]
+[info] Functions [3]: [first(name#18, false), first(city#19, false), first(segment#20, false)]
+[info] Aggregate Attributes [3]: [first(name#18)()#920, first(city#19)()#922, first(segment#20)()#924]
+[info] Results [4]: [customer_id#17, first(name#18)()#920 AS name#921, first(city#19)()#922 AS city#923, first(segment#20)()#924 AS segment#925]
+[info] (20) Filter [codegen id : 5]
+[info] Input [4]: [customer_id#17, name#921, city#923, segment#925]
+[info] Condition : atleastnnonnulls(4, customer_id#17, name#921, city#923, segment#925)
+[info] (21) BroadcastExchange
+[info] Input [4]: [customer_id#17, name#921, city#923, segment#925]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=2003]
+[info] (22) BroadcastQueryStage
+[info] Output [4]: [customer_id#17, name#921, city#923, segment#925]
+[info] Arguments: 3
+[info] (23) BroadcastHashJoin [codegen id : 9]
+[info] Left keys [1]: [customer_id#911]
+[info] Right keys [1]: [customer_id#17]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (24) Project [codegen id : 9]
+[info] Output [9]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919]
+[info] Input [10]: [order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919, customer_id#17, name#921, city#923, segment#925]
+[info] (25) Scan csv 
+[info] Output [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/mohit/scala-spark-30-day-practice/Day-30-Final-Capstone-E-Commerce/data/products.csv]
+[info] PushedFilters: [IsNotNull(product_id)]
+[info] ReadSchema: struct<product_id:string,product_name:string,category:string,price:int>
+[info] (26) Filter [codegen id : 3]
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Condition : isnotnull(product_id#42)
+[info] (27) Sort [codegen id : 3]
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (28) SortAggregate
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Keys [1]: [product_id#42]
+[info] Functions [3]: [partial_first(product_name#43, false), partial_first(category#44, false), partial_first(price#45, false)]
+[info] Aggregate Attributes [6]: [first#964, valueSet#965, first#966, valueSet#967, first#968, valueSet#969]
+[info] Results [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] (29) Exchange
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=1893]
+[info] (30) ShuffleQueryStage
+[info] Output [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: 2
+[info] (31) AQEShuffleRead
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: coalesced
+[info] (32) Sort [codegen id : 6]
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (33) SortAggregate
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Keys [1]: [product_id#42]
+[info] Functions [3]: [first(product_name#43, false), first(category#44, false), first(price#45, false)]
+[info] Aggregate Attributes [3]: [first(product_name#43)()#926, first(category#44)()#928, first(price#45)()#930]
+[info] Results [4]: [product_id#42, first(product_name#43)()#926 AS product_name#927, first(category#44)()#928 AS category#929, first(price#45)()#930 AS price#931]
+[info] (34) Filter [codegen id : 7]
+[info] Input [4]: [product_id#42, product_name#927, category#929, price#931]
+[info] Condition : atleastnnonnulls(4, product_id#42, product_name#927, category#929, price#931)
+[info] (35) BroadcastExchange
+[info] Input [4]: [product_id#42, product_name#927, category#929, price#931]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=2059]
+[info] (36) BroadcastQueryStage
+[info] Output [4]: [product_id#42, product_name#927, category#929, price#931]
+[info] Arguments: 4
+[info] (37) BroadcastHashJoin [codegen id : 9]
+[info] Left keys [1]: [product_id#913]
+[info] Right keys [1]: [product_id#42]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (38) Project [codegen id : 9]
+[info] Output [14]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, product_name#927, category#929, price#931, quantity#915, order_date#917, status#919, (quantity#915 * price#931) AS order_value#506, UDF(segment#925) AS customer_tier#723]
+[info] Input [13]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919, product_id#42, product_name#927, category#929, price#931]
+[info] (39) Sort
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Arguments: [order_id#67 ASC NULLS FIRST], false, 0
+[info] (40) SortAggregate
+[info] Input [6]: [order_id#67, customer_id#68, product_id#69, quantity#70, order_date#71, status#72]
+[info] Keys [1]: [order_id#67]
+[info] Functions [5]: [partial_first(customer_id#68, false), partial_first(product_id#69, false), partial_first(quantity#70, false), partial_first(order_date#71, false), partial_first(status#72, false)]
+[info] Aggregate Attributes [10]: [first#932, valueSet#933, first#934, valueSet#935, first#936, valueSet#937, first#938, valueSet#939, first#940, valueSet#941]
+[info] Results [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] (41) Exchange
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Arguments: hashpartitioning(order_id#67, 200), ENSURE_REQUIREMENTS, [plan_id=1762]
+[info] (42) Sort
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Arguments: [order_id#67 ASC NULLS FIRST], false, 0
+[info] (43) SortAggregate
+[info] Input [11]: [order_id#67, first#942, valueSet#943, first#944, valueSet#945, first#946, valueSet#947, first#948, valueSet#949, first#950, valueSet#951]
+[info] Keys [1]: [order_id#67]
+[info] Functions [5]: [first(customer_id#68, false), first(product_id#69, false), first(quantity#70, false), first(order_date#71, false), first(status#72, false)]
+[info] Aggregate Attributes [5]: [first(customer_id#68)()#910, first(product_id#69)()#912, first(quantity#70)()#914, first(order_date#71)()#916, first(status#72)()#918]
+[info] Results [6]: [order_id#67, first(customer_id#68)()#910 AS customer_id#911, first(product_id#69)()#912 AS product_id#913, first(quantity#70)()#914 AS quantity#915, first(order_date#71)()#916 AS order_date#917, first(status#72)()#918 AS status#919]
+[info] (44) Filter
+[info] Input [6]: [order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919]
+[info] Condition : (((isnotnull(quantity#915) AND isnotnull(status#919)) AND ((quantity#915 > 0) AND (atleastnnonnulls(6, order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919) AND (status#919 = COMPLETED)))) AND (isnotnull(customer_id#911) AND isnotnull(product_id#913)))
+[info] (45) Filter
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Condition : isnotnull(customer_id#17)
+[info] (46) Sort
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Arguments: [customer_id#17 ASC NULLS FIRST], false, 0
+[info] (47) SortAggregate
+[info] Input [4]: [customer_id#17, name#18, city#19, segment#20]
+[info] Keys [1]: [customer_id#17]
+[info] Functions [3]: [partial_first(name#18, false), partial_first(city#19, false), partial_first(segment#20, false)]
+[info] Aggregate Attributes [6]: [first#952, valueSet#953, first#954, valueSet#955, first#956, valueSet#957]
+[info] Results [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] (48) Exchange
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: hashpartitioning(customer_id#17, 200), ENSURE_REQUIREMENTS, [plan_id=1769]
+[info] (49) Sort
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Arguments: [customer_id#17 ASC NULLS FIRST], false, 0
+[info] (50) SortAggregate
+[info] Input [7]: [customer_id#17, first#958, valueSet#959, first#960, valueSet#961, first#962, valueSet#963]
+[info] Keys [1]: [customer_id#17]
+[info] Functions [3]: [first(name#18, false), first(city#19, false), first(segment#20, false)]
+[info] Aggregate Attributes [3]: [first(name#18)()#920, first(city#19)()#922, first(segment#20)()#924]
+[info] Results [4]: [customer_id#17, first(name#18)()#920 AS name#921, first(city#19)()#922 AS city#923, first(segment#20)()#924 AS segment#925]
+[info] (51) Filter
+[info] Input [4]: [customer_id#17, name#921, city#923, segment#925]
+[info] Condition : atleastnnonnulls(4, customer_id#17, name#921, city#923, segment#925)
+[info] (52) BroadcastExchange
+[info] Input [4]: [customer_id#17, name#921, city#923, segment#925]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=1774]
+[info] (53) BroadcastHashJoin
+[info] Left keys [1]: [customer_id#911]
+[info] Right keys [1]: [customer_id#17]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (54) Project
+[info] Output [9]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919]
+[info] Input [10]: [order_id#67, customer_id#911, product_id#913, quantity#915, order_date#917, status#919, customer_id#17, name#921, city#923, segment#925]
+[info] (55) Filter
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Condition : isnotnull(product_id#42)
+[info] (56) Sort
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (57) SortAggregate
+[info] Input [4]: [product_id#42, product_name#43, category#44, price#45]
+[info] Keys [1]: [product_id#42]
+[info] Functions [3]: [partial_first(product_name#43, false), partial_first(category#44, false), partial_first(price#45, false)]
+[info] Aggregate Attributes [6]: [first#964, valueSet#965, first#966, valueSet#967, first#968, valueSet#969]
+[info] Results [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] (58) Exchange
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=1780]
+[info] (59) Sort
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (60) SortAggregate
+[info] Input [7]: [product_id#42, first#970, valueSet#971, first#972, valueSet#973, first#974, valueSet#975]
+[info] Keys [1]: [product_id#42]
+[info] Functions [3]: [first(product_name#43, false), first(category#44, false), first(price#45, false)]
+[info] Aggregate Attributes [3]: [first(product_name#43)()#926, first(category#44)()#928, first(price#45)()#930]
+[info] Results [4]: [product_id#42, first(product_name#43)()#926 AS product_name#927, first(category#44)()#928 AS category#929, first(price#45)()#930 AS price#931]
+[info] (61) Filter
+[info] Input [4]: [product_id#42, product_name#927, category#929, price#931]
+[info] Condition : atleastnnonnulls(4, product_id#42, product_name#927, category#929, price#931)
+[info] (62) BroadcastExchange
+[info] Input [4]: [product_id#42, product_name#927, category#929, price#931]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=1785]
+[info] (63) BroadcastHashJoin
+[info] Left keys [1]: [product_id#913]
+[info] Right keys [1]: [product_id#42]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (64) Project
+[info] Output [14]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, product_name#927, category#929, price#931, quantity#915, order_date#917, status#919, (quantity#915 * price#931) AS order_value#506, UDF(segment#925) AS customer_tier#723]
+[info] Input [13]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, quantity#915, order_date#917, status#919, product_id#42, product_name#927, category#929, price#931]
+[info] (65) AdaptiveSparkPlan
+[info] Output [14]: [order_id#67, customer_id#911, name#921, city#923, segment#925, product_id#913, product_name#927, category#929, price#931, quantity#915, order_date#917, status#919, order_value#506, customer_tier#723]
+[info] Arguments: isFinalPlan=true
+[info] (66) HashAggregate
+[info] Input [4]: [order_id#482, category#489, quantity#491, order_value#506]
+[info] Keys [1]: [category#489]
+[info] Functions [3]: [partial_sum(order_value#506), partial_count(order_id#482), partial_sum(quantity#491)]
+[info] Aggregate Attributes [3]: [sum#2578L, count#2579L, sum#2580L]
+[info] Results [4]: [category#489, sum#2581L, count#2582L, sum#2583L]
+[info] (67) Exchange
+[info] Input [4]: [category#489, sum#2581L, count#2582L, sum#2583L]
+[info] Arguments: hashpartitioning(category#489, 200), ENSURE_REQUIREMENTS, [plan_id=2745]
+[info] (68) HashAggregate
+[info] Input [4]: [category#489, sum#2581L, count#2582L, sum#2583L]
+[info] Keys [1]: [category#489]
+[info] Functions [3]: [sum(order_value#506), count(order_id#482), sum(quantity#491)]
+[info] Aggregate Attributes [3]: [sum(order_value#506)#2345L, count(order_id#482)#2347L, sum(quantity#491)#2350L]
+[info] Results [4]: [category#489, sum(order_value#506)#2345L AS category_sales#2346L, count(order_id#482)#2347L AS order_count#2349L, sum(quantity#491)#2350L AS quantity_sold#2351L]
+[info] (69) Exchange
+[info] Input [4]: [category#489, category_sales#2346L, order_count#2349L, quantity_sold#2351L]
+[info] Arguments: rangepartitioning(category_sales#2346L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=2748]
+[info] (70) Sort
+[info] Input [4]: [category#489, category_sales#2346L, order_count#2349L, quantity_sold#2351L]
+[info] Arguments: [category_sales#2346L DESC NULLS LAST], true, 0
+[info] (71) AdaptiveSparkPlan
+[info] Output [4]: [category#489, category_sales#2346L, order_count#2349L, quantity_sold#2351L]
+[info] Arguments: isFinalPlan=false
+[info] --- SPARK EXECUTION CONCEPTS ---
+[info] DAG       : Spark builds a Directed Acyclic Graph of transformations.
+[info] Lineage   : Spark remembers how each dataset was created.
+[info] Stage     : A stage contains tasks separated by shuffle boundaries.
+[info] Shuffle   : Data is redistributed between partitions.
+[info] Executor  : Executes tasks and stores cached data.
+[info] YARN      : Cluster manager that allocates resources in Hadoop environments.
+[info] Optimization: Filter early, persist reused data, tune partitions and use broadcast joins.
+[info] --- STRUCTURED STREAMING ---
+[info] Starting streaming processing from data/stream_events
+[error] 26/10/12 06:42:17 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-bf3c4021-bc16-4969-bd7d-12248553745f. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+[error] 26/10/12 06:42:17 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[info] -------------------------------------------
+[info] Batch: 0
+[info] -------------------------------------------
+[info] +--------+-----------+----------+--------+----------+-----------+
+[info] |order_id|customer_id|product_id|quantity|event_date|event_value|
+[info] +--------+-----------+----------+--------+----------+-----------+
+[info] |S001    |C001       |P002      |1       |2026-10-06|1          |
+[info] |S002    |C002       |P001      |1       |2026-10-06|1          |
+[info] |S003    |C003       |P003      |2       |2026-10-06|2          |
+[info] |S005    |C005       |P005      |1       |2026-10-07|1          |
+[info] +--------+-----------+----------+--------+----------+-----------+
+[info] ======================================================================
+[info] DAY 30 CAPSTONE COMPLETED SUCCESSFULLY
+[info] ======================================================================
+[success] Total time: 37 s, completed Oct 12, 2026, 6:42:18 AM
